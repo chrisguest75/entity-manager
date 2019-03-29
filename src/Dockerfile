@@ -15,7 +15,7 @@ ENV PIP_NO_CACHE_DIR=false
 RUN pip install --upgrade pip pipenv
 
 # Apply the pipenv
-RUN mkdir -p /src/entity-manager
+RUN mkdir -p /src/entity_manager
 COPY Pipfile* setup.py /src/
 WORKDIR /src
 RUN pipenv install --system
@@ -36,7 +36,7 @@ USER appuser
 WORKDIR /home/appuser
 ENV ENTITY_MANAGER_SERVER_PORT 9090
 EXPOSE 9099
-CMD ["python3", "/src/entity-manager/server.py"]
+CMD ["python3", "/src/entity_manager/server.py"]
 #---------------------------
 FROM common AS test
 RUN pipenv install --dev --system

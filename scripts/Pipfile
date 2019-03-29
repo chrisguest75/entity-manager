@@ -16,4 +16,4 @@ hu_build = {version="*", index="hu_pypi"}
 [dev-packages]
 
 [requires]
-
+python_version = "3.7"

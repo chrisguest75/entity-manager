@@ -6,7 +6,7 @@ services:
     build:
       context: .
     volumes:
-      - ./word2vec:/src/entity-manager
+      - ./entity_manager:/src/entity_manager
       - ./tests:/tests
     ports:
       - 10011:9099

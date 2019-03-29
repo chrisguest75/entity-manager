@@ -4,4 +4,4 @@
 from setuptools import setup
 
 # as this is for testing purposes only, don't provide metadata
-setup(name='entity-manager', version='0.1', packages=['entity-manager'])
+setup(name='entity_manager', version='0.1', packages=['entity_manager'])
