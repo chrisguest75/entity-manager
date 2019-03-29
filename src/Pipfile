@@ -9,6 +9,9 @@ python-json-logger = {version="*", index="pypi"}
 pyyaml = {version="*", index="pypi"}
 aiohttp = {version="*", index="pypi"}
 
+# internal libraries
+"entity_manager" = {path = ".", editable = true}
+
 [dev-packages]
 colorama = {version="*", index="pypi"}
 pytest = {version="*", index="pypi"}

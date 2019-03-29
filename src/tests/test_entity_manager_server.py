@@ -12,14 +12,14 @@ TEST_PATH = Path(os.path.dirname(os.path.realpath(__file__)))
 
 @pytest.fixture(scope="module")
 def entity_manager_server():
-    server = entity-manager.server.EntityManagerServer()
+    server = entity_manager.server.EntityManagerServer()
     return server
 
 
 @pytest.fixture()
-def cli(loop, aiohttp_client, w2v_server):
+def cli(loop, aiohttp_client, entity_manager_server):
     web_app = web.Application()
-    entity-manager.server.initialize_web_app(web_app, entity_manager_server)
+    entity_manager.server.initialize_web_app(web_app, entity_manager_server)
     return loop.run_until_complete(aiohttp_client(web_app))
 
 

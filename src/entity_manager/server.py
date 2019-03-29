@@ -7,6 +7,8 @@ import logging
 import logging.config
 import time
 
+import aiohttp
+from aiohttp import web
 
 def _get_logger():
     logger = logging.getLogger('entitymanager.server')
@@ -70,9 +72,9 @@ async def log_error_middleware(request, handler):
     return response
 
 
-def initialize_web_app(app, w2v_server):
+def initialize_web_app(app, entity_manager_server):
     app.middlewares.append(log_error_middleware)
-    app.router.add_get('/health', server.handle_request_health)
+    app.router.add_get('/health', entity_manager_server.handle_request_health)
 
 
 class EntityManagerLogFilter(logging.Filter):

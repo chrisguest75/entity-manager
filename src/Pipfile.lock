@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "942f7966a34e0d62b6026ae0e53894ae181627808fe261432594e2ac5f7350ce"
+            "sha256": "96e0be91a0e85766bf389bec88dac10281dc10f6fd8790ac78c7485fc6f6a3f8"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -64,6 +64,10 @@
                 "sha256:fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"
             ],
             "version": "==3.0.4"
+        },
+        "entity-manager": {
+            "editable": true,
+            "path": "."
         },
         "fluent-logger": {
             "hashes": [
