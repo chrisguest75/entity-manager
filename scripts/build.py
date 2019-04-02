@@ -34,7 +34,7 @@ def main(build_args):
 
 if __name__ == "__main__":
     PARSER = argparse.ArgumentParser(
-        description='Word2Vec build command-line')
+        description='Entity-Manager build command-line')
     PARSER.add_argument('--version', help='build version', default='latest')
     PARSER.add_argument(
         '--docker-build', help='Build docker', action="store_true")
