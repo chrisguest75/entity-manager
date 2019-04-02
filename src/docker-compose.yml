@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  entity_manager:
+    build:
+      context: .
+    volumes:
+      - ./entity_manager:/src/entity_manager
+      - ./tests:/tests
+    ports:
+      - 10011:9099
+    environment:
+    - ENTITY_MANAGER_SERVER_PORT=9099

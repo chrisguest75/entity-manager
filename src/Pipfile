@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fluent-logger = {version="*", index="pypi"}
+python-json-logger = {version="*", index="pypi"}
+pyyaml = {version="*", index="pypi"}
+aiohttp = {version="*", index="pypi"}
+
+# internal libraries
+"entity_manager" = {path = ".", editable = true}
+
+[dev-packages]
+colorama = {version="*", index="pypi"}
+pytest = {version="*", index="pypi"}
+pytest-aiohttp = {version="*", index="pypi"}
+pytest-cov = {version="*", index="pypi"}
+pytest-timeout = {version="*", index="pypi"}
+pytest-mock = {version="*", index="pypi"}
+flake8 = {version="*", index="pypi"}
+yapf = {version="*", index="pypi"}
+
+[requires]
+python_version = "3.7"
