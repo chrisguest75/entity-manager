@@ -51,7 +51,7 @@ formatters:
     format: "(asctime) (levelname) (name) (message)"
 filters:
     entitymanagerlogfilter:
-        (): entity_manager.server.entitymanagerLogFilter
+        (): entity_manager.server.EntityManagerLogFilter
 handlers:
   console:
     class: logging.StreamHandler
