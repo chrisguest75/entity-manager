@@ -8,6 +8,8 @@ fluent-logger = {version="*", index="pypi"}
 python-json-logger = {version="*", index="pypi"}
 pyyaml = {version="*", index="pypi"}
 aiohttp = {version="*", index="pypi"}
+numpy = {version="*", index="pypi"}
+
 
 # internal libraries
 "entity_manager" = {path = ".", editable = true}

@@ -5,13 +5,18 @@ import json
 import yaml
 import logging
 import logging.config
-import time
+import traceback
+import pathlib
 
 import aiohttp
 from aiohttp import web
+import numpy
+
+from entity_manager.svc_config import SvcConfig
+
 
 def _get_logger():
-    logger = logging.getLogger('entitymanager.server')
+    logger = logging.getLogger('entity_manager.server')
     return logger
 
 
@@ -46,7 +51,7 @@ formatters:
     format: "(asctime) (levelname) (name) (message)"
 filters:
     entitymanagerlogfilter:
-        (): entitymanager.server.entitymanagerLogFilter
+        (): entity_manager.server.entitymanagerLogFilter
 handlers:
   console:
     class: logging.StreamHandler
