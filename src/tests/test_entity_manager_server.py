@@ -1,5 +1,4 @@
 import os
-import numbers
 from pathlib import Path
 
 import pytest
